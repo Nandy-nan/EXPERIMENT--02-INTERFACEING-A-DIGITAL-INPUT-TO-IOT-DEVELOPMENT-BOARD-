@@ -1,8 +1,8 @@
 ###  DATE: 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Nandhana.R
+###  ROLL NO :212223040124
+###  DEPARTMENT: CSE
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,11 +77,33 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+#include"stdio.h"
+#include"stdbool.h"
+bool IRstatus;
+IRstatus=HAL GPIO_Readin(GPIOB,GPIO_PIN_3);
+
+While(1)
+
+{ if(IRstatus==1)
+
+{ HAL GPIO WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET); HAL Delay(1000);
+
+HAL GPIO WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET); HAL Delay(1000);
+
+}
+
+else
+
+{ HAL GPIO WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET); HAL_Delay(1000);
+
+}
 
 
 
 ## Output  :
- 
+
+ ![Screenshot 2024-09-04 131415](https://github.com/user-attachments/assets/a2d5157f-7343-4c4e-807e-c8871791ff35)
+
  
  
  
